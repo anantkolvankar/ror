@@ -1,0 +1,27 @@
+<h1>Listing foodqos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Tast</th>
+    <th>Rank</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @foodqos.each do |foodqo| %>
+  <tr>
+    <td><%= foodqo.name %></td>
+    <td><%= foodqo.tast %></td>
+    <td><%= foodqo.rank %></td>
+    <td><%= link_to 'Show', foodqo %></td>
+    <td><%= link_to 'Edit', edit_foodqo_path(foodqo) %></td>
+    <td><%= link_to 'Destroy', foodqo, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Foodqo', new_foodqo_path %>

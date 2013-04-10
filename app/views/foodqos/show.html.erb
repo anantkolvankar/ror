@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @foodqo.name %>
+</p>
+
+<p>
+  <b>Tast:</b>
+  <%= @foodqo.tast %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @foodqo.rank %>
+</p>
+
+
+<%= link_to 'Edit', edit_foodqo_path(@foodqo) %> |
+<%= link_to 'Back', foodqos_path %>
